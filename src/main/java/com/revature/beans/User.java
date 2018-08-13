@@ -14,6 +14,7 @@ public class User implements Serializable {
 	private String firstName;
 	private String lastName;
 	private int age;
+	private double balance;
 
 	public User() {
 		super();
@@ -67,6 +68,14 @@ public class User implements Serializable {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
 	}
 
 	@Override

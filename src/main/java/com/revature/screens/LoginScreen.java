@@ -27,9 +27,10 @@ public class LoginScreen implements Screen {
 		
 		log.debug("received users credentials");
 		User currentUser = ud.findByUsernameAndPassword(username, password);
+
 		if (currentUser != null) {
 			log.info("user succefully logged in");
-			return new HomeScreen();
+			return new HomeScreen(currentUser);
 		}
 
 		System.out.println("unable to login");

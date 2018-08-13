@@ -94,3 +94,111 @@
 2018-08-10 14:35:57 ERROR Launcher:15 - error log
 2018-08-10 14:35:57 FATAL Launcher:16 - fatal log
 2018-08-10 14:36:02 DEBUG LoginScreen:17 - started login screen
+2018-08-13 14:32:42 TRACE Launcher:11 - trace log
+2018-08-13 14:32:42 DEBUG Launcher:12 - debug log
+2018-08-13 14:32:42 INFO  Launcher:13 - info log
+2018-08-13 14:32:42 WARN  Launcher:14 - warn log
+2018-08-13 14:32:42 ERROR Launcher:15 - error log
+2018-08-13 14:32:42 FATAL Launcher:16 - fatal log
+2018-08-13 14:32:47 DEBUG LoginScreen:17 - started login screen
+2018-08-13 14:34:36 TRACE Launcher:11 - trace log
+2018-08-13 14:34:36 DEBUG Launcher:12 - debug log
+2018-08-13 14:34:36 INFO  Launcher:13 - info log
+2018-08-13 14:34:36 WARN  Launcher:14 - warn log
+2018-08-13 14:34:36 ERROR Launcher:15 - error log
+2018-08-13 14:34:36 FATAL Launcher:16 - fatal log
+2018-08-13 14:34:41 DEBUG LoginScreen:17 - started login screen
+2018-08-13 14:34:42 TRACE LoginScreen:20 - username = ls
+2018-08-13 14:34:43 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 14:34:43 DEBUG LoginScreen:17 - started login screen
+2018-08-13 14:34:52 TRACE Launcher:11 - trace log
+2018-08-13 14:34:52 DEBUG Launcher:12 - debug log
+2018-08-13 14:34:52 INFO  Launcher:13 - info log
+2018-08-13 14:34:52 WARN  Launcher:14 - warn log
+2018-08-13 14:34:52 ERROR Launcher:15 - error log
+2018-08-13 14:34:52 FATAL Launcher:16 - fatal log
+2018-08-13 14:34:57 DEBUG LoginScreen:17 - started login screen
+2018-08-13 14:35:12 TRACE LoginScreen:20 - username = register
+2018-08-13 14:35:23 DEBUG LoginScreen:17 - started login screen
+2018-08-13 14:35:25 TRACE LoginScreen:20 - username = ls
+2018-08-13 14:35:30 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 14:35:30 DEBUG LoginScreen:17 - started login screen
+2018-08-13 14:35:33 TRACE LoginScreen:20 - username = seitz
+2018-08-13 14:35:35 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 14:35:35 INFO  LoginScreen:31 - user succefully logged in
+2018-08-13 14:49:23 TRACE Launcher:11 - trace log
+2018-08-13 14:49:23 DEBUG Launcher:12 - debug log
+2018-08-13 14:49:23 INFO  Launcher:13 - info log
+2018-08-13 14:49:23 WARN  Launcher:14 - warn log
+2018-08-13 14:49:23 ERROR Launcher:15 - error log
+2018-08-13 14:49:23 FATAL Launcher:16 - fatal log
+2018-08-13 14:49:28 DEBUG LoginScreen:17 - started login screen
+2018-08-13 14:49:50 TRACE LoginScreen:20 - username = seitz
+2018-08-13 14:49:52 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 14:49:52 INFO  LoginScreen:31 - user succefully logged in
+2018-08-13 14:51:46 TRACE Launcher:11 - trace log
+2018-08-13 14:51:46 DEBUG Launcher:12 - debug log
+2018-08-13 14:51:46 INFO  Launcher:13 - info log
+2018-08-13 14:51:46 WARN  Launcher:14 - warn log
+2018-08-13 14:51:46 ERROR Launcher:15 - error log
+2018-08-13 14:51:46 FATAL Launcher:16 - fatal log
+2018-08-13 14:51:51 DEBUG LoginScreen:17 - started login screen
+2018-08-13 14:53:20 TRACE LoginScreen:20 - username = seitz
+2018-08-13 14:53:22 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 14:53:22 INFO  LoginScreen:31 - user succefully logged in
+2018-08-13 15:10:01 DEBUG LoginScreen:17 - started login screen
+2018-08-13 15:10:06 TRACE LoginScreen:20 - username = seitz
+2018-08-13 15:10:11 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 15:10:11 INFO  LoginScreen:32 - user succefully logged in
+2018-08-13 15:10:50 DEBUG LoginScreen:17 - started login screen
+2018-08-13 15:11:03 TRACE LoginScreen:20 - username = seitz
+2018-08-13 15:11:06 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 15:11:06 INFO  LoginScreen:32 - user succefully logged in
+2018-08-13 15:24:39 DEBUG LoginScreen:17 - started login screen
+2018-08-13 15:24:43 TRACE LoginScreen:20 - username = seitz
+2018-08-13 15:24:45 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 15:24:45 INFO  LoginScreen:32 - user succefully logged in
+2018-08-13 15:30:36 DEBUG LoginScreen:17 - started login screen
+2018-08-13 15:30:40 TRACE LoginScreen:20 - username = seitz
+2018-08-13 15:30:43 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 15:30:43 INFO  LoginScreen:32 - user succefully logged in
+2018-08-13 15:34:23 DEBUG LoginScreen:17 - started login screen
+2018-08-13 15:34:32 TRACE LoginScreen:20 - username = seitz
+2018-08-13 15:34:34 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 15:34:34 INFO  LoginScreen:32 - user succefully logged in
+2018-08-13 15:36:06 DEBUG LoginScreen:17 - started login screen
+2018-08-13 15:36:12 TRACE LoginScreen:20 - username = seitz
+2018-08-13 15:36:14 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 15:36:14 INFO  LoginScreen:32 - user succefully logged in
+2018-08-13 15:37:37 DEBUG LoginScreen:17 - started login screen
+2018-08-13 15:37:41 TRACE LoginScreen:20 - username = seitz
+2018-08-13 15:37:47 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 15:37:47 INFO  LoginScreen:32 - user succefully logged in
+2018-08-13 15:39:26 DEBUG LoginScreen:17 - started login screen
+2018-08-13 15:39:30 TRACE LoginScreen:20 - username = seitz
+2018-08-13 15:39:33 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 15:39:33 INFO  LoginScreen:32 - user succefully logged in
+2018-08-13 15:42:44 DEBUG LoginScreen:17 - started login screen
+2018-08-13 15:42:51 TRACE LoginScreen:20 - username = seitz
+2018-08-13 15:42:58 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 15:42:58 INFO  LoginScreen:32 - user succefully logged in
+2018-08-13 15:48:38 DEBUG LoginScreen:17 - started login screen
+2018-08-13 15:48:41 TRACE LoginScreen:20 - username = seitz
+2018-08-13 15:48:43 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 15:48:43 INFO  LoginScreen:32 - user succefully logged in
+2018-08-13 15:50:15 DEBUG LoginScreen:17 - started login screen
+2018-08-13 15:50:17 TRACE LoginScreen:20 - username = seitz
+2018-08-13 15:50:19 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 15:50:19 INFO  LoginScreen:32 - user succefully logged in
+2018-08-13 15:51:35 DEBUG LoginScreen:17 - started login screen
+2018-08-13 15:51:37 TRACE LoginScreen:20 - username = seitz
+2018-08-13 15:51:39 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 15:51:39 INFO  LoginScreen:32 - user succefully logged in
+2018-08-13 16:20:15 DEBUG LoginScreen:17 - started login screen
+2018-08-13 16:20:30 TRACE LoginScreen:20 - username = seitz
+2018-08-13 16:20:32 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 16:20:32 INFO  LoginScreen:32 - user succefully logged in
+2018-08-13 16:22:54 DEBUG LoginScreen:17 - started login screen
+2018-08-13 16:23:08 TRACE LoginScreen:20 - username = seitz
+2018-08-13 16:23:10 DEBUG LoginScreen:28 - received users credentials
+2018-08-13 16:23:10 INFO  LoginScreen:32 - user succefully logged in
