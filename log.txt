@@ -94,14 +94,3 @@
 2018-08-10 14:35:57 ERROR Launcher:15 - error log
 2018-08-10 14:35:57 FATAL Launcher:16 - fatal log
 2018-08-10 14:36:02 DEBUG LoginScreen:17 - started login screen
-2018-08-13 13:15:33 TRACE Launcher:11 - trace log
-2018-08-13 13:15:33 DEBUG Launcher:12 - debug log
-2018-08-13 13:15:33 INFO  Launcher:13 - info log
-2018-08-13 13:15:33 WARN  Launcher:14 - warn log
-2018-08-13 13:15:33 ERROR Launcher:15 - error log
-2018-08-13 13:15:33 FATAL Launcher:16 - fatal log
-2018-08-13 13:15:38 DEBUG LoginScreen:17 - started login screen
-2018-08-13 13:15:47 TRACE LoginScreen:20 - username = seitz
-2018-08-13 13:15:50 DEBUG LoginScreen:28 - received users credentials
-2018-08-13 13:15:50 DEBUG LoginScreen:17 - started login screen
-2018-08-13 13:15:55 TRACE LoginScreen:20 - username = register
