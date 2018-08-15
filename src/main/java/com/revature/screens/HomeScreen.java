@@ -47,7 +47,7 @@ public class HomeScreen implements Screen {
 
 				userTransactionLog = userTransactionLog + " on " + dtf.format(now);
 				user.addTransactionLog(userTransactionLog);
-
+                UserSerializer.currentUserDao.updateUser(user);
 				break;
 			case "2":
 				System.out.println("Please enter the amount you want to withdraw.");
@@ -63,7 +63,7 @@ public class HomeScreen implements Screen {
 
 				userTransactionLog = userTransactionLog +  " on " + dtf.format(now);
 				user.addTransactionLog(userTransactionLog);
-
+                UserSerializer.currentUserDao.updateUser(user);
 				break;
 			case "3":
                 System.out.println("--------------------");
