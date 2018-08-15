@@ -16,8 +16,8 @@ public class User implements Serializable {
 	private int age;
 	private double balance;
 	private String transactionLog;
-	private Boolean isAdmin;
-	
+	private Boolean isAdmin = false;
+
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
