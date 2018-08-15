@@ -17,7 +17,6 @@ public class HomeScreen implements Screen {
 
 	NumberFormat formatter = NumberFormat.getCurrencyInstance();
 	DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-	LocalDateTime now = LocalDateTime.now();
 
 	public HomeScreen(User currentUser) {
 		user = currentUser;
@@ -45,7 +44,7 @@ public class HomeScreen implements Screen {
 				userTransactionLog = "You deposited: " + formatter.format(userInputAmount);
 				System.out.println(userTransactionLog);
 
-				userTransactionLog = userTransactionLog + " on " + dtf.format(now);
+				userTransactionLog = userTransactionLog + " on " + dtf.format(LocalDateTime.now());
 				user.addTransactionLog(userTransactionLog);
                 UserSerializer.currentUserDao.updateUser(user);
 				break;
@@ -61,7 +60,7 @@ public class HomeScreen implements Screen {
 				user.setBalance(user.getBalance() - check);
 				userTransactionLog = "You withdraw: " + formatter.format((check));
 
-				userTransactionLog = userTransactionLog +  " on " + dtf.format(now);
+				userTransactionLog = userTransactionLog +  " on " + dtf.format(LocalDateTime.now());
 				user.addTransactionLog(userTransactionLog);
                 UserSerializer.currentUserDao.updateUser(user);
 				break;

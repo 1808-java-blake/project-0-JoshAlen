@@ -16,7 +16,8 @@ public class User implements Serializable {
 	private int age;
 	private double balance;
 	private String transactionLog;
-
+	private Boolean isAdmin;
+	
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -79,6 +80,9 @@ public class User implements Serializable {
 		this.balance = balance;
 	}
 
+	public Boolean getAdmin() {
+		return isAdmin;
+	}
 
 	@Override
 	public int hashCode() {
