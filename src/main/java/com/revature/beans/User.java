@@ -15,6 +15,7 @@ public class User implements Serializable {
 	private String lastName;
 	private int age;
 	private double balance;
+	private String transactionLog;
 
 	public User() {
 		super();
@@ -78,6 +79,7 @@ public class User implements Serializable {
 		this.balance = balance;
 	}
 
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -128,6 +130,22 @@ public class User implements Serializable {
 	public String toString() {
 		return "User [username=" + username + ", password=" + password + ", firstName=" + firstName + ", lastName="
 				+ lastName + ", age=" + age + "]";
+	}
+
+	public void addTransactionLog(String string){
+		this.transactionLog = this.transactionLog + string + "\n";
+	}
+
+	public void printTransactionLog(){
+
+		if(this.transactionLog != null){
+			System.out.println(this.transactionLog);
+		} else {
+			System.out.println("no transaction history");
+		}
+
+		System.out.println("Your current balance is: $" + getBalance());
+		System.out.println("--------------------");
 	}
 
 }

@@ -15,7 +15,7 @@ import com.revature.beans.User;
 public class UserSerializer implements UserDao {
 	private Logger log = Logger.getRootLogger();
 	public static final UserSerializer us = new UserSerializer();
-	
+
 	private UserSerializer() {
 		super();
 	}
