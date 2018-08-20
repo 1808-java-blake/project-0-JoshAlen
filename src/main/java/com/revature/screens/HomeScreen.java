@@ -1,10 +1,8 @@
 package com.revature.screens;
 
 import com.revature.beans.User;
-import com.revature.daos.UserSerializer;
 
 import java.text.NumberFormat;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
@@ -35,48 +33,6 @@ public class HomeScreen implements Screen {
 		System.out.println("Enter 4 to view your transaction history");
 
 		String selection = scan.nextLine();
-		switch (selection) {
-			case "1":
-
-				System.out.println("Please enter the amount you want to deposit.");
-				user.setBalance(user.getBalance() + getUserInput());
-
-				userTransactionLog = "You deposited: " + formatter.format(userInputAmount);
-				System.out.println(userTransactionLog);
-
-				userTransactionLog = userTransactionLog + " on " + dtf.format(LocalDateTime.now());
-				user.addTransactionLog(userTransactionLog);
-                UserSerializer.currentUserDao.updateUser(user);
-				break;
-			case "2":
-				System.out.println("Please enter the amount you want to withdraw.");
-				double check = getUserInput();
-
-				if(check > user.getBalance()){
-					System.out.println("You don't have enough funds in this account.");
-					break;
-				}
-
-				user.setBalance(user.getBalance() - check);
-				userTransactionLog = "You withdraw: " + formatter.format((check));
-
-				userTransactionLog = userTransactionLog +  " on " + dtf.format(LocalDateTime.now());
-				user.addTransactionLog(userTransactionLog);
-                UserSerializer.currentUserDao.updateUser(user);
-				break;
-			case "3":
-                System.out.println("--------------------");
-				System.out.println("Your current balance is: " + formatter.format(user.getBalance()));
-                System.out.println("--------------------");
-				break;
-			case "4":
-				System.out.println("--------------------");
-				System.out.println("Your transaction history: ");
-				user.printTransactionLog();
-				break;
-			default:
-				break;
-		}
 
 		return this;
 	}

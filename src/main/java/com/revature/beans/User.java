@@ -1,35 +1,37 @@
 package com.revature.beans;
 
-import java.io.Serializable;
+public class User {
 
-public class User implements Serializable {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 2878891003003024330L;
-	
+	private int id;
 	private String username;
 	private String password;
 	private String firstName;
 	private String lastName;
 	private int age;
-	private double balance;
-	private String transactionLog;
-	private Boolean isAdmin = false;
+	private boolean isAdmin;
+	private String createAt;
 
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(String username, String password, String firstName, String lastName, int age) {
+	public User(int id, String username, String password, String firstName, String lastName, int age) {
 		super();
+		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getUsername() {
@@ -72,84 +74,19 @@ public class User implements Serializable {
 		this.age = age;
 	}
 
-	public double getBalance() {
-		return balance;
-	}
-
-	public void setBalance(double balance) {
-		this.balance = balance;
-	}
-
-	public Boolean getAdmin() {
+	public boolean isAdmin() {
 		return isAdmin;
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + age;
-		result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
-		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
-		result = prime * result + ((password == null) ? 0 : password.hashCode());
-		result = prime * result + ((username == null) ? 0 : username.hashCode());
-		return result;
+	public void setAdmin(boolean admin) {
+		isAdmin = admin;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		User other = (User) obj;
-		if (age != other.age)
-			return false;
-		if (firstName == null) {
-			if (other.firstName != null)
-				return false;
-		} else if (!firstName.equals(other.firstName))
-			return false;
-		if (lastName == null) {
-			if (other.lastName != null)
-				return false;
-		} else if (!lastName.equals(other.lastName))
-			return false;
-		if (password == null) {
-			if (other.password != null)
-				return false;
-		} else if (!password.equals(other.password))
-			return false;
-		if (username == null) {
-			if (other.username != null)
-				return false;
-		} else if (!username.equals(other.username))
-			return false;
-		return true;
+	public String getCreateAt() {
+		return createAt;
 	}
 
-	@Override
-	public String toString() {
-		return "User [username=" + username + ", password=" + password + ", firstName=" + firstName + ", lastName="
-				+ lastName + ", age=" + age + "]";
+	public void setCreateAt(String createAt) {
+		this.createAt = createAt;
 	}
-
-	public void addTransactionLog(String string){
-		this.transactionLog = this.transactionLog + string + "\n";
-	}
-
-	public void printTransactionLog(){
-
-		if(this.transactionLog != null){
-			System.out.println(this.transactionLog);
-		} else {
-			System.out.println("no transaction history");
-		}
-
-		System.out.println("Your current balance is: $" + getBalance());
-		System.out.println("--------------------");
-	}
-
 }
