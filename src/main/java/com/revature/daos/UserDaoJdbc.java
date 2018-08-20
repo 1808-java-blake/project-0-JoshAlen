@@ -12,9 +12,10 @@ import com.revature.beans.User;
 import com.revature.util.ConnectionUtil;
 
 public class UserDaoJdbc implements UserDao {
+
     private ConnectionUtil cu = ConnectionUtil.cu;
     private Logger log = Logger.getRootLogger();
-
+    private User currentUser;
     static {
         try {
             Class.forName("org.postgresql.Driver");
@@ -23,7 +24,6 @@ public class UserDaoJdbc implements UserDao {
             e.printStackTrace();
         }
     }
-
 
     @Override
     public void createUser(User u) {
@@ -51,12 +51,7 @@ public class UserDaoJdbc implements UserDao {
     @Override
     public User findByUsernameAndPassword(String username, String password) {
         try (Connection conn = cu.getConnection()) {
-            // don't do this
-//			Statement s = conn.createStatement();
-//			ResultSet rs = s.executeQuery("SELECT * FROM app_users WHERE username='" +
-//							username + "' AND pass='" + password + "'");
 
-            // do this
             PreparedStatement ps = conn.prepareStatement(
                     "SELECT * FROM bank_user WHERE username=? and password=?");
             ps.setString(1, username);
@@ -72,9 +67,12 @@ public class UserDaoJdbc implements UserDao {
                 u.setId(rs.getInt("user_id"));
                 u.setAdmin(rs.getBoolean("is_admin"));
                 u.setCreateAt(rs.getString("create_at"));
+                currentUser = u;
                 return u;
             } else {
+
                 log.warn("failed to find user with provided credentials from the db");
+                currentUser = null;
                 return null;
             }
 
@@ -85,16 +83,7 @@ public class UserDaoJdbc implements UserDao {
         return null;
     }
 
-    @Override
-    public void updateUser(User u) {
-        // TODO Auto-generated method stub
-
+    public User getCurrentUser() {
+        return currentUser;
     }
-
-    @Override
-    public void deleteUser(User u) {
-        // TODO Auto-generated method stub
-
-    }
-
 }

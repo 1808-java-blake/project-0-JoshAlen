@@ -12,7 +12,5 @@ public interface UserDao {
 	 */
 	void createUser(User u);
 	User findByUsernameAndPassword(String username, String password);
-	void updateUser(User u);
-	void deleteUser(User u);
-
+	User getCurrentUser();
 }

@@ -15,7 +15,7 @@ public class HomeScreen implements Screen {
 
 	NumberFormat formatter = NumberFormat.getCurrencyInstance();
 	DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-
+	
 	public HomeScreen(User currentUser) {
 		user = currentUser;
 	}
@@ -33,7 +33,22 @@ public class HomeScreen implements Screen {
 		System.out.println("Enter 4 to view your transaction history");
 
 		String selection = scan.nextLine();
+		switch (selection){
+			case "1":
+				System.out.println("Current User id is: " + user.getId());
+				break;
+			case "2":
 
+				break;
+
+			case "3":
+
+				break;
+
+			case "4":
+
+				break;
+		}
 		return this;
 	}
 
