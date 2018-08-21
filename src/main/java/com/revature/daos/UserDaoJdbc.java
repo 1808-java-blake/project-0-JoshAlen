@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 import org.apache.log4j.Logger;
 
@@ -15,7 +14,7 @@ public class UserDaoJdbc implements UserDao {
 
     private ConnectionUtil cu = ConnectionUtil.cu;
     private Logger log = Logger.getRootLogger();
-    private User currentUser;
+
     static {
         try {
             Class.forName("org.postgresql.Driver");
@@ -67,12 +66,12 @@ public class UserDaoJdbc implements UserDao {
                 u.setId(rs.getInt("user_id"));
                 u.setAdmin(rs.getBoolean("is_admin"));
                 u.setCreateAt(rs.getString("create_at"));
-                currentUser = u;
+                u.setBalance(rs.getDouble("balance"));
+                u.setLog(rs.getString("log"));
                 return u;
             } else {
 
                 log.warn("failed to find user with provided credentials from the db");
-                currentUser = null;
                 return null;
             }
 
@@ -83,7 +82,60 @@ public class UserDaoJdbc implements UserDao {
         return null;
     }
 
-    public User getCurrentUser() {
-        return currentUser;
+    @Override
+    public void deposit(double amount, User user) {
+
+        try (Connection conn = cu.getConnection()){
+            user.setBalance(user.getBalance() + amount);
+
+            PreparedStatement ps = conn.prepareStatement(
+                    "UPDATE bank_user SET balance = ? WHERE user_id= ?"
+            );
+            ps.setDouble(1, user.getBalance());
+            ps.setInt(2, user.getId());
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
+
+    @Override
+    public void withdraw(double amount, User user){
+        try (Connection conn = cu.getConnection()){
+            user.setBalance(user.getBalance() - amount);
+
+            PreparedStatement ps = conn.prepareStatement(
+                    "UPDATE bank_user SET balance = ? WHERE user_id= ?; "
+            );
+            ps.setDouble(1, user.getBalance());
+            ps.setInt(2, user.getId());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void addTransactionLog(String log, User user){
+        try (Connection conn = cu.getConnection()){
+            user.setLog(user.getLog() + log + "\n");
+
+            PreparedStatement ps = conn.prepareStatement(
+                    "UPDATE bank_user SET log = ? WHERE user_id= ?; "
+            );
+            ps.setString(1, user.getLog());
+            ps.setInt(2, user.getId());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void printTransactionLog(){
+        System.out.println("Trying to print log");
+
+    }
+
+
+
 }

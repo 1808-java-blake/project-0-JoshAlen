@@ -7,7 +7,7 @@ import java.util.List;
 public interface AccountDao {
     public static final AccountDao currentAccountDao = new AccountDaoJdbc();
 
-    int createAccount(Account a);
+    void createAccount(String accountType, double initDeposit, int userId);
 
     List<Account> findByUserId(int userId);
 

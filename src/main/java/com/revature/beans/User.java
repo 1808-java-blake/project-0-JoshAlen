@@ -10,6 +10,8 @@ public class User {
 	private int age;
 	private boolean isAdmin;
 	private String createAt;
+	private String log;
+	private double balance;
 
 	public User() {
 		super();
@@ -88,5 +90,21 @@ public class User {
 
 	public void setCreateAt(String createAt) {
 		this.createAt = createAt;
+	}
+
+	public String getLog() {
+		return log;
+	}
+
+	public void setLog(String log) {
+		this.log = log;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
 	}
 }

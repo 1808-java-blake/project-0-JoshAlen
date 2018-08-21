@@ -15,7 +15,8 @@ public class LoginScreen implements Screen {
 	@Override
 	public Screen start() {
 		log.debug("started login screen");
-		System.out.println("Enter Username or type Register to sign up: ");
+
+		System.out.println("\n---! Enter Username or type Register to sign up: !---");
 		String username = scan.nextLine();
 		log.trace("username = " + username);
 		if ("register".equalsIgnoreCase(username)) {

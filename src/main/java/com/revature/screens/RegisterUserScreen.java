@@ -12,6 +12,7 @@ public class RegisterUserScreen implements Screen {
 	@Override
 	public Screen start() {
 		User u = new User();
+		System.out.println("\n---! User Registration !---");
 		System.out.println("Enter new username");
 		u.setUsername(scan.nextLine());
 		System.out.println("Enter password");
