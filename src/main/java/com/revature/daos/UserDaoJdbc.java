@@ -47,6 +47,8 @@ public class UserDaoJdbc implements UserDao {
 
     }
 
+
+
     @Override
     public User findByUsernameAndPassword(String username, String password) {
         try (Connection conn = cu.getConnection()) {
@@ -130,12 +132,6 @@ public class UserDaoJdbc implements UserDao {
             e.printStackTrace();
         }
     }
-
-    public void printTransactionLog(){
-        System.out.println("Trying to print log");
-
-    }
-
 
 
 }

@@ -19,5 +19,6 @@ public interface UserDao {
 	void withdraw(double amount, User user);
 
 	void addTransactionLog(String log, User user);
-	void printTransactionLog();
+
 }
+

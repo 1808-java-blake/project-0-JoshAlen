@@ -69,7 +69,7 @@ public class HomeScreen implements Screen {
 				break;
 			case "4":
 					System.out.println("\nYour transaction history");
-					UserDao.currentUserDao.printTransactionLog();
+					System.out.println(user.getLog().replaceAll("null", ""));
 				break;
 				default:
 					break;
